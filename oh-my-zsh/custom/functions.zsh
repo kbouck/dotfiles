@@ -1,3 +1,8 @@
+# ZSH functions
+# 
+# This script should contain only zsh-dependent functions. Generic functions that work in both zsh or bash should be located in common/functions
+#
+
 # pull "down" menu of virtualenv's
 # todo:
 # - handle case when .venv doesn't exist yet - selection list shows empty option
@@ -42,6 +47,7 @@ function venv() {
 
 # pull "down" menu of recent directories
 function fd() {
+    [[ -n "$ZSH_VERSION" ]] || { echo "ERROR: This function requires zsh. Curent shell is ${SHELL}"; return; }
     target_dir_idx=$(dirs -v | fzf | cut -f1)
     [[ -n "${target_dir_idx}" ]] && cd -${target_dir_idx}
 }
