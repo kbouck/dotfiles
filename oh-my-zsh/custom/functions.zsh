@@ -9,14 +9,20 @@ function venv() {
   venvs=$(printf "${venvs}\n[+] new\n")
   # sed removes any [.] prefix fro the selected name
   # cut selects the chosen venv name
-  selected_venv=$(echo ${venvs} | fzf | sed 's/\[.\] *//')
+  selected_venv=$(echo "${venvs}" | fzf | sed 's/\[.\] *//')
   #selected_venv=$(echo ${venvs} | fzf | sed 's/\[.\] *//' | cut -f2)
   if [[ "${selected_venv}" = "deactivate" ]]; then
       echo "deactivating"
       deactivate
 
   elif [[ "${selected_venv}" = "new" ]]; then
-      vared -p 'new venv: ' -c new_venv
+      # read new venv name, zsh method
+      # vared -p 'new venv: ' -c new_venv     # ZSH method
+      
+      # read new venv name, bash method
+      printf "new venv: "
+      read new_venv
+      
       venv_dir="$HOME/.venv/${new_venv}"
       if [[ -e "${venv_dir}"  ]]; then
           echo "${venv_dir} already exists"
