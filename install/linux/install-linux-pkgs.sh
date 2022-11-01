@@ -18,6 +18,7 @@ sudo -v
 
 sudo apt update
 
+install fzf
 install htop
 install lolcat
 
