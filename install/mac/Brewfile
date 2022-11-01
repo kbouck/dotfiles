@@ -1,0 +1,95 @@
+# taps
+# ====
+tap "adoptopenjdk/openjdk"
+tap "saulpw/vd"               # for visidata
+
+
+# casks (.app's) and formulae (cli tools)
+# =======================================
+
+# mac / system
+cask "hazel"
+cask "raspberry-pi-imager"
+
+# network / security
+cask "mullvadvpn"
+cask "transmit"
+cask "vnc-viewer"
+cask "wireshark"
+brew "httpie"
+brew "mitmproxy"
+brew "mtr"
+brew "syncthing"
+brew "tailscale"
+brew "wget"
+
+
+# dev / lang / build / vcs
+cask "arduino"
+brew "go"
+brew "gradle"
+brew "groovy"
+brew "node"
+
+# terminal/editors/vcs
+cask "sublime-text"
+cask "visual-studio-code"
+brew "tmux"
+
+# container
+brew "docker"
+brew "docker-compose"
+
+# reference
+cask "dash"
+brew "cheat"
+
+# cloud
+brew "awscli"
+brew "azure-cli"
+
+# db 
+cask "dbeaver-community"
+cask "postgres-unofficial"
+brew "sqlite"
+
+# cli
+brew "fzf"
+brew "htop"
+brew "lolcat"
+brew "up"
+
+# data-fu
+brew "datamash"
+brew "miller"
+brew "jq"
+brew "yq"
+brew "gnuplot"
+brew "visidata"
+brew "saxon"
+
+
+# to consider
+# ===========
+#tap "homebrew/cask-fonts"
+#
+#cask "1password"
+#cask "cron"
+#cask "font-hack-nerd-font"
+#cask "kitty"
+#cask "lunasea"
+#cask "mimestream"
+#cask "raycast"
+#cask "microsoft-edge"
+#cask "nordvpn"
+#cask "home-assistant"
+#cask "keepingyouawake"
+#cask "slack"
+#cask "whatsapp"
+#cask "yt-music"
+#
+#brew "postgres"
+#brew "fasd"
+#brew "weechat"
+#brew "pinentry-mac"
+#brew "neovim"

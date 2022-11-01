@@ -1,0 +1,42 @@
+" vim-plug
+" ========
+" vim plugin system
+" https://github.com/junegunn/vim-plug
+
+" Run vim-plug :PlugInstall to auto-install any plugins not yet installed
+autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
+  \| PlugInstall --sync | source $MYVIMRC
+\| endif
+
+
+" Plugins will be downloaded under the specified directory.
+call plug#begin('~/.vim/plugged')
+
+" Declare the list of plugins.
+Plug 'vim-syntastic/syntastic'
+
+" others to consider
+" Plug 'tpope/vim-sensible'
+" Plug 'junegunn/seoul256.vim'
+"
+
+" vim-plug plugin list ends here. Plugins become visible to Vim after this call.
+" Initialize plugin system
+call plug#end()
+
+
+" other custom vim settings
+" =========================
+"
+" no... tabs... ever...
+" https://stackoverflow.com/questions/234564/tab-key-4-spaces-and-auto-indent-after-curly-braces-in-vim
+" 
+filetype plugin indent on
+" show existing tab with 4 spaces width
+set tabstop=4
+" when indenting with '>', use 4 spaces width
+set shiftwidth=4
+" On pressing tab, insert 4 spaces
+set expandtab
+
+
