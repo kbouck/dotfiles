@@ -7,7 +7,6 @@ dotfiles_dir=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd 
 # Linux
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
     echo "Linux"
-    alias linux_test='echo linux_test'
     # ${dotfiles_dir}/install/common/install-common.sh
     # ${dotfiles_dir}/install/linux/install-linux.sh
     # ${dotfiles_dir}/install/linux/install-pkgs.sh

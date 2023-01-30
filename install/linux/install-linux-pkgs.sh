@@ -25,4 +25,5 @@ install lolcat
 install docker
 install docker-compose
 
+install gh
 
