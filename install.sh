@@ -106,7 +106,7 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
     ${dotfiles_dir}/mac/install-mac-pkgs.sh             # install mac packages (w/ brew).
     ${dotfiles_dir}/mac/install-mac-dock.sh             # config dock settings
     ${dotfiles_dir}/mac/install-mac-prefs.sh            # confic mac defaults
-    set_default_shell_zsh
+    #set_default_shell_zsh                              # default for mac these days
     install_zsh_syntax_highlighting
     install_vim_plug
     link_files
