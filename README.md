@@ -7,7 +7,7 @@ These dotfiles intended to be used with GitHub codespaces, or to be manually clo
 # Installation
 ```
 $ git clone https://github.com/kbouck/dotfiles.git
-$ ./install.sh
+$ dotfiles/install.sh
 ```
 
 # Behavior
