@@ -5,10 +5,14 @@ These dotfiles intended to be used with GitHub codespaces, or to be manually clo
 
 
 # Installation
-- clone repository
-- run `install.sh`
-  - script will detect OS (Win, MacOS, Ubuntu, Raspberry Pi OS)
-  - and will then then link or copy the dotfiles, or other config relevant only to that environment
+```
+$ git clone https://github.com/kbouck/dotfiles.git
+$ ./install.sh
+```
+
+# Behavior
+- script will detect OS (Win, MacOS, Ubuntu, Raspberry Pi OS)
+- and will then then link or copy the dotfiles, or other config relevant only to that environment
 
 
 # Repo Layout
