@@ -1,0 +1,5 @@
+# fzf pull "down" menu of recent directories
+[[ -n "$ZSH_VERSION" ]] || { echo "ERROR: This function requires zsh. Curent shell is ${SHELL}"; return; }
+target_dir_idx=$(dirs -v | fzf | cut -f1)
+[[ -n "${target_dir_idx}" ]] && cd -${target_dir_idx}
+

@@ -18,12 +18,17 @@ sudo -v
 
 sudo apt update
 
+# shell
+install zsh
 install fzf
 install htop
 install lolcat
 
+# dev langs/tools
+install python3-venv
+install gh
+
+# ops
 install docker
 install docker-compose
-
-install gh
 
