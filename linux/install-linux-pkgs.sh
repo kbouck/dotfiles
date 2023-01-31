@@ -2,7 +2,7 @@
 
 # todo - need to determine OS and package mgmt system (eg. apt vs rpm?)
 
-# todo - is 'which $1' sufficient to check? package name won't always match executable
+
 function install {
   which $1 &> /dev/null
 
@@ -14,7 +14,8 @@ function install {
   fi
 }
 
-sudo -v
+echo "Installing Linux Packages (may need password for sudo)"
+sudo -v || { echo >&2 "No sudo privilege. Skipping package installation"; exit 1; }
 
 sudo apt update
 
