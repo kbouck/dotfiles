@@ -25,9 +25,15 @@ install fzf
 install htop
 install lolcat
 
+# network
+install net-tools
+
 # dev langs/tools
 install python3-venv
 install gh
+
+# data-fu
+install miller
 
 # ops
 install docker
