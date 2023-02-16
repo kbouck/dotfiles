@@ -124,6 +124,11 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
 # I'm not sure this can happen.
 #elif [[ "$OSTYPE" == "win32" ]]; then
 
+# TODO
+# windows terminal settings
+# /mnt/c/Users/kbouck/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json
+# cp ./windows-terminal-settings.json "$terminalDir/LocalState/settings.json"
+
 
 # ...
 #elif [[ "$OSTYPE" == "freebsd"* ]]; then

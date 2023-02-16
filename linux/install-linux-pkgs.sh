@@ -1,6 +1,8 @@
 #!/bin/bash
 
 # todo - need to determine OS and package mgmt system (eg. apt vs rpm?)
+# - apt: Ubuntu/Pop
+# - yum: RHEL
 
 
 function install {
