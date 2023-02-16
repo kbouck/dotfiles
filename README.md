@@ -16,9 +16,10 @@ $ dotfiles/install.sh
 
 
 # Repo Layout
-- install.sh                  # Detects OS and runs appropriate scripts
-- install/mac/                # Mac-specific stuff
-- install/linux/              # Linux-specific stuff
-- install/win                 # Win-specific stuff
-
+```
+install.sh                  # Detects OS and runs appropriate scripts
+install/mac/                # Mac-specific stuff
+install/linux/              # Linux-specific stuff
+install/win                 # Win-specific stuff
+```
 
