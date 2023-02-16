@@ -10,7 +10,8 @@
 autoload -U colors && colors  # enable usage of named colors below
 autoload -Uz vcs_info         # enable vcs info in prompt
 precmd() { vcs_info }         # load before displaying the prompt
-zstyle ':vcs_info:git:*' formats '(%b)'
+zstyle ':vcs_info:*' check-for-changes true
+zstyle ':vcs_info:git:*' formats '(%b)%m%u%c '
 setopt PROMPT_SUBST
 PROMPT='%{$fg[cyan]%}%n@%m %{$fg_bold[red]%}${PWD/#$HOME/~} %{$fg_bold[yellow]%}${vcs_info_msg_0_}$%{$reset_color%} '
 
