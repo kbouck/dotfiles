@@ -75,10 +75,11 @@ alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
+alias gs="git status"
 alias gaa="git add --all"
 alias gcm="git commit -m"
 alias gp="git push"
-alias gll="git log --pretty=format:\"%C(yellow)%h %ad%Cred%d %Creset%s%Cblue (%cn)\" --decorate --date=short"
+alias gll="git log --pretty=format:\"%C(green)%h %C(yellow)%ad%Cred%d %Creset%s%Cblue (%cn)\" --decorate --date=short"
 alias gl="gll -n 10"
 
 # awk
