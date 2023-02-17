@@ -36,6 +36,7 @@ install gh
 
 # data-fu
 install miller
+install sqlite3
 
 # ops
 install docker
