@@ -1,6 +1,7 @@
 # lang/dev
 python3-pip
 python3-venv
+golang-go
 gh
 
 # shell
