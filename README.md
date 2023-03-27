@@ -18,8 +18,8 @@ $ dotfiles/install.sh
 # Repo Layout
 ```
 install.sh               # Detects OS and run appropriate script
-mac/                     # MacOS dotfiles/scripts/configs/packages
-linux/                   # Linux (incl. WSL) dotfiles/scripts/
+mac/                     # MacOS - dotfiles, apps, defaults, dock, prefs  
+linux/                   # Linux, WSL, Raspberry Pi - dotfiles, apps 
 win/                     # Windows stuff (TODO)
 ```
 
