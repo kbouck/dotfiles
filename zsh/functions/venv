@@ -1,19 +1,43 @@
-# pull "down" menu of virtualenv's
+# venv - an interactive pull "down" menu to create or change virtualenv's
+#
+# usage:
+#   venv                 # interactively select, create, deactivate
+#   venv <name>          # activate venv, creating if necessary
+#
 # todo:
 # - handle case when .venv doesn't exist yet - selection list shows empty option
 # - maybe auto-upgrade pip version just after creating?
+#
+##
+
+
+
 [[ -d ~/.venv/ ]] || mkdir ~/.venv
 venvs=$(ls ~/.venv/)
-typeset -f "deactivate" > /dev/null && venvs=$(printf "${venvs}\n[x] deactivate\n")
-venvs=$(printf "${venvs}\n[+] new\n")
-# sed removes any [.] prefix fro the selected name
-# cut selects the chosen venv name
-selected_venv=$(echo "${venvs}" | fzf --ansi | sed 's/\[.\] *//')
-#selected_venv=$(echo ${venvs} | fzf | sed 's/\[.\] *//' | cut -f2)
+venvs_menu=${venvs}
+typeset -f "deactivate" > /dev/null && venvs_menu=$(printf "${venvs_menu}\n[x] deactivate\n")
+venvs_menu=$(printf "${venvs_menu}\n[+] new\n")
+
+
+# no argument provided, select interactively using fzf
+if [ -z "$1" ]; then
+  # sed removes any [.] prefix for the selected name
+  # cut selects the chosen venv name
+  selected_venv=$(echo "${venvs_menu}" | fzf --ansi | sed 's/\[.\] *//')
+  #selected_venv=$(echo ${venvs} | fzf | sed 's/\[.\] *//' | cut -f2)
+
+# argument provided, activate 
+else
+  selected_venv=$1
+fi
+
+
+# deactivate
 if [[ "${selected_venv}" = "deactivate" ]]; then
   echo "deactivating"
   deactivate
 
+# new
 elif [[ "${selected_venv}" = "new" ]]; then
   # read new venv name, zsh method
   # vared -p 'new venv: ' -c new_venv     # ZSH method
@@ -34,6 +58,16 @@ elif [[ "${selected_venv}" = "new" ]]; then
       pip install --upgrade pip
   fi
 
+# activate
 elif [[ -n "${selected_venv}" ]]; then
-  source "$HOME/.venv/$selected_venv/bin/activate"
+  if [ ! -e "$HOME/.venv/${selected_venv}" ]; then
+    echo "No venv named \"${selected_venv}\" was found. Available venvs:"
+    echo "${venvs}"
+    return -1
+  else 
+    source "$HOME/.venv/$selected_venv/bin/activate"
+  fi
 fi
+
+
+

@@ -1,20 +1,23 @@
 # lang/dev
-python3-pip
-python3-venv
 golang-go
 gh
+gradle
+python3-pip
+python3-venv
+rustc
 
 # shell
-zsh
 fzf
 htop
 lolcat
+zsh
 
 # net
 net-tools
 
 # data
-jq
+#jq
+gojq
 miller
 sqlite3
 #yq
